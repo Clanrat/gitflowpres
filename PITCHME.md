@@ -29,7 +29,7 @@ First described in 2010 by Vincent Dreissen
 
 
 <div class="mainbranches">
-    ![main branches](/img/main-branches@2x.png)
+    ![main branches](img/mainbranches.png)
 </div>
 <div class="right">
 <ul>
