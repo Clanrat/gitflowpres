@@ -27,7 +27,7 @@ First described in 2010 by Vincent Dreissen
 @title(The main branches)
 
 
-<div class="mainbranches">
+<div class="mainbranches left">
 ![main branches](img/mainbranches.png)
 </div>
 
