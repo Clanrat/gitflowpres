@@ -1,6 +1,6 @@
-.reveal .mainbranches img, .reveal .featurebranch img {
-    height: 40%;
-    width: 40%;
+.reveal .mainbranches img, .reveal .featurebranch img, .reveal .releasebranch img {
+    height: 50%;
+    width: 50%;
 }
 
 .reveal div.right {

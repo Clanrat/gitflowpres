@@ -69,3 +69,95 @@ First described in 2010 by Vincent Dreissen
         <li>Exists for as long as the feature is in development</li>
     </ul>
 </div>
+
+---
+
+### Creating and using a feature branch
+
+```
+# Create a new feature branch
+$ git checkout -b feature/my-new-feature develop
+#Develop your feature when ready merge your changes
+
+$ git checkout develop
+Switched to branch 'develop'
+
+# Merge your changes into develop
+$ git merge --no-ff feature/my-new-feature
+Updating ...
+(summary of changes)
+
+# Delete feature branch
+$ git branch -d feature/my-new-feature
+Deleted branch feature/my-new-feature ...
+
+# Push your changes to origin
+$ git push origin develop
+
+```
+
+--- 
+
+### Release branches
+
+<div class="left releasebranch">
+![Release branch](img/releasebranch.png)
+</div>
+<div class="right">
+    <ul>
+        <li>Used to prepare a new release. Last minute bug fixes can be done on the release branch</li>
+        <li>All features that are supposed to be in the release must be in develop when the branch is created</li>
+        <li>Branches off develop</li>     
+        <li>Must merge back into develop and master</li>
+    </ul>
+</div>
+
+--- 
+
+### Creating and using release branches
+
+```
+# Create the new release branch
+$ git checkout -b release/1.1 develop
+
+# Bump any version number (if needed in your workflow)
+
+$ ./bump-version 1.1
+Version bumped to 1.1
+
+$ git commit -a -m 'Bumped version to 1.1'
+
+# Do any testing in the UAT environment. Any bugs discovered should be fixed directly on the release branch, not develop.
+
+```
+
+---
+
+### Finishing a release
+
+```
+
+# Merge to master
+
+$ git checkout master
+Switched to branch 'master'
+$ git merge --no-ff release/1.1
+...
+(summary of changes)
+# Tag release commit with version number for future reference
+$ git tag -a 1.1
+
+# Merge changes to develop
+
+$ git checkout develop
+$ git merge --no-ff release/1.1
+
+# Delete release
+$ git branch -d release/1.1
+
+```
+
+--- 
+
+### Hotfix branches
+
