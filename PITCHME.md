@@ -26,6 +26,7 @@ First described in 2010 by Vincent Dreissen
 --- 
 @title(The main branches)
 
+![main branches](img/mainbranches.png)
 
 
 <div class="mainbranches">
