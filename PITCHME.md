@@ -26,16 +26,15 @@ First described in 2010 by Vincent Dreissen
 --- 
 @title(The main branches)
 
-![main branches](img/mainbranches.png)
-
 
 <div class="mainbranches">
-    ![main branches](img/mainbranches.png)
+![main branches](img/mainbranches.png)
 </div>
+
 <div class="right">
-<ul>
-    <li>2 Branches. Master and develop</li>
-    <li></li>
-</ul>
+    <ul>
+        <li>2 Branches. Master and develop</li>
+        <li></li>
+    </ul>
 </div>
 
