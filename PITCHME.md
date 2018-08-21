@@ -28,7 +28,7 @@ First described in 2010 by Vincent Dreissen
 
 
 @snap[west]
-![main branches](/img/main-branches@2x.png)
+![main branches](/img/main-branches@2x.png =267x402)
 @snapend
 @snap[east]
 1. test
