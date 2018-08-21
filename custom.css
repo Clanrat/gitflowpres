@@ -1,9 +1,9 @@
-.mainbranches img {
-    height: 80%;
-    width: 80%;
+.reveal .mainbranches img {
+    height: 40%;
+    width: 40%;
 }
 
-div.right {
+.reveal div.right {
     left:31.25%;
     top: 75px;
     float: right;
@@ -13,7 +13,7 @@ div.right {
     font-size:75%;
 }
 
-div.left {
+.reveal div.left {
     left:-8.33%;
     text-align: left;
     float: left;
