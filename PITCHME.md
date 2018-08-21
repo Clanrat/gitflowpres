@@ -27,9 +27,14 @@ First described in 2010 by Vincent Dreissen
 @title(The main branches)
 
 
-@snap[west]
-![main branches](/img/main-branches@2x.png =267x402)
-@snapend
-@snap[east]
-1. test
-@snapend
+
+<div class="mainbranches">
+    ![main branches](/img/main-branches@2x.png)
+</div>
+<div class="right">
+<ul>
+    <li>2 Branches. Master and develop</li>
+    <li></li>
+</ul>
+</div>
+
