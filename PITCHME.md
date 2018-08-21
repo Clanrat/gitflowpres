@@ -17,5 +17,11 @@ First described in 2010 by Vincent Dreissen
 3. Has a release staging area
 4. Emergency fixes are more manageable
 
+---
+
 # How?
+
+--- 
+
+## The main branches
 
