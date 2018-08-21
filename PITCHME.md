@@ -24,8 +24,8 @@ First described in 2010 by Vincent Dreissen
 # How?
 
 --- 
+@title(The main branches)
 
-## The main branches
 
 @snap[west]
 ![main branches](/img/main-branches@2x.png)
