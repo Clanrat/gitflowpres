@@ -57,7 +57,7 @@ First described in 2010 by Vincent Dreissen
 
 ### Feature branches
 
-<div class="left">
+<div class="left featurebranch">
 ![feature branch](img/featurebranch.png)
 </div>
 
