@@ -74,7 +74,7 @@ First described in 2010 by Vincent Dreissen
 
 ### Creating and using a feature branch
 
-```
+```bash
 # Create a new feature branch
 $ git checkout -b feature/my-new-feature develop
 #Develop your feature when ready merge your changes
@@ -116,7 +116,7 @@ $ git push origin develop
 
 ### Creating and using release branches
 
-```
+```bash
 # Create the new release branch
 $ git checkout -b release/1.1 develop
 
@@ -127,7 +127,7 @@ Version bumped to 1.1
 
 $ git commit -a -m 'Bumped version to 1.1'
 
-# Do any testing in the UAT environment. Any bugs discovered should be fixed directly on the release branch, not develop.
+# Do any testing in the UAT environment. Any bugs discovered should be fixed # directly on the release branch, not develop.
 
 ```
 
@@ -135,7 +135,7 @@ $ git commit -a -m 'Bumped version to 1.1'
 
 ### Finishing a release
 
-```
+```bash
 
 # Merge to master
 
@@ -161,3 +161,148 @@ $ git branch -d release/1.1
 
 ### Hotfix branches
 
+<div class="left hotfixbranch">
+![Hotfix branch](img/hotfixbranch.png)
+</div>
+
+<div class="right">
+    <ul>
+        <li>Created when there is a need to act directly on production</li>
+        <li>Branches off master at the current production release</li>
+        <li>Changes are merged back into master and develop (or the release branch if one exists)</li>
+        <li>Allows for development to continue normally while issue is fixed</li>
+    </ul>
+</div>
+
+
+---
+
+### Creating a hotfix
+
+```bash
+# Create hotfix branch
+$ git checkout -b hotfix/1.1.1 master
+
+# Bump version
+$ ./bump-version.sh 1.1.1
+Version updated to 1.1.1
+$ git commit -a -m "Bumped version to 1.1.1"
+
+# Fix production issue
+$ git commit -m "Fixed severe production problem"
+
+# Merge changes to master
+$ git checkout master
+Switched to branch 'master'
+$ git merge --no-ff hotfix/1.1.1
+...
+(Summary of changes)
+$ git tag -a 1.1.1
+
+# Merge changes to develop
+$ git checkout develop 
+Switched to branch 'develop'
+git merge --no-ff hotfix/1.1.1
+...
+(Summary of changes)
+
+# Delete hotfix branch
+$ git branch -d hotfix/1.1.1
+Deleted branch hotfix/1.1.1
+```
+
+---
+
+# Making things easier
+
+---
+
+### Introducing the git-flow extension
+
+```bash
+
+$ git flow
+usage: git flow <subcommand>
+
+Available subcommands are:
+   init      Initialize a new git repo with support for the branching model.
+   feature   Manage your feature branches.
+   bugfix    Manage your bugfix branches.
+   release   Manage your release branches.
+   hotfix    Manage your hotfix branches.
+   support   Manage your support branches.
+   version   Shows version information.
+   config    Manage your git-flow configuration.
+   log       Show log deviating from base branch.
+
+Try 'git flow <subcommand> help' for details.
+
+```
+
+---
+### git-flow feature branching
+
+```bash
+
+# Starting a new feature
+$ git flow feature start my-feature
+
+# Finishing feature
+$ git flow feature finish my-feature
+
+```
+
+---
+
+### git-flow release branching
+
+```bash
+# Creating a new release
+$ git flow release start 1.1.0
+
+# Finishing a release
+$ git checkout master 
+$ git checkout merge release/1.1.0
+$ git flow release finish '1.1.0'
+
+```
+
+---
+
+### git-flow hotfix branching
+
+```bash
+
+# Creating a new hotfix
+$ git flow hotfix start my-hotfix
+
+# Finishing a hotfix
+$ git flow hotfix finish my-hotfix
+
+```
+
+---
+
+### UI-based tools
+
+Source-Tree
+
+---
+
+# Demo 1 - Creating a new git flow repository
+
+---
+
+# Demo 2 - Migrating an existing repository to git flow
+
+---
+
+### Useful links
+
+<div>
+    <ul>
+        <li>[Original blog post](https://nvie.com/posts/a-successful-git-branching-model/)</li>
+        <li>[Why arent't you using git-flow](https://jeffkreeftmeijer.com/git-flow/)</li>
+        <li>[git flow extension](https://github.com/nvie/gitflow)</li>
+    </ul>
+</div>
