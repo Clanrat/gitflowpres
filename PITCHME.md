@@ -213,7 +213,7 @@ Deleted branch hotfix/1.1.1
 
 ---
 
-# Making things easier
+### Making things easier
 
 ---
 
@@ -289,11 +289,11 @@ Source-Tree
 
 ---
 
-# Demo 1 - Creating a new git flow repository
+### Demo 1 - Creating a new git flow repository
 
 ---
 
-# Demo 2 - Migrating an existing repository to git flow
+### Demo 2 - Migrating an existing repository to git flow
 
 ---
 
