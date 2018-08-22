@@ -19,6 +19,7 @@ First described in 2010 by Vincent Dreissen
 3. Has a release staging area
 4. Emergency fixes are more manageable
 
+
 ---
 
 # How?
@@ -40,6 +41,10 @@ First described in 2010 by Vincent Dreissen
     </ul>
 </div>
 
+Note:
+- Each merge to master should represent a production release
+
+
 ---
 
 ### The supporting branches 
@@ -52,6 +57,11 @@ First described in 2010 by Vincent Dreissen
         <li>(Support) branches</li>
     </ul>
 </div>
+
+Note:
+- Do not talk about support branches
+- All are normal git branches, just have special rules
+- Short-lived
 
 ---
 
@@ -69,6 +79,10 @@ First described in 2010 by Vincent Dreissen
         <li>Exists for as long as the feature is in development</li>
     </ul>
 </div>
+
+Note:
+- These might never be pushed to origin
+
 
 ---
 
@@ -111,6 +125,11 @@ $ git push origin develop
         <li>Must merge back into develop and master</li>
     </ul>
 </div>
+
+Note:
+- Bug fixes always done on branch not on develop
+- Features completed after release branch has been created **must** wait for the next release
+- Merge 
 
 --- 
 
@@ -294,6 +313,10 @@ Source-Tree
 ---
 
 ### Demo 2 - Migrating an existing repository to git flow
+
+---
+
+### To recap
 
 ---
 
