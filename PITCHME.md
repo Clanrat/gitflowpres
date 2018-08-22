@@ -289,7 +289,7 @@ Source-Tree
 
 ---
 
-### Demo 1 - Creating a new git flow repository
+### Demo 1 - Using git flow in practice
 
 ---
 
