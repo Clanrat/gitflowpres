@@ -3,7 +3,7 @@
 
 ---
 
-### Setup
+### Single branch
 
 ![Big problem](img/MasterBigProblem.PNG)
 
@@ -327,15 +327,15 @@ Source-Tree
 
 ---
 
-### Demo 1 - Using git flow in practice
-
----
-
-### Demo 2 - Migrating an existing repository to git flow
+### Demo - Using git flow in practice
 
 ---
 
 ### To recap
+
+Note:
+- Advantages over commiting directly to master
+- Branches
 
 ---
 
