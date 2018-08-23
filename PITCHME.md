@@ -329,6 +329,13 @@ Source-Tree
 
 ### Demo - Using git flow in practice
 
+Note:
+- Create new repo
+- Commit once on master
+- Run gitflow init
+- Demo new feature, release, hotfix, feature
+- Show graph 
+
 ---
 
 ### To recap
