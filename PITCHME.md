@@ -3,6 +3,25 @@
 
 ---
 
+### Setup
+
+![Big problem](img/MasterBigProblem.PNG)
+
+Note:
+- Commiting to master
+- Introduce bug into production
+- Several commits into unstable feature before discovery
+
+---
+
+![Big problem fix](img/MasterBigProblemFix.PNG)
+
+Note:
+- Reverting reverts
+- Possible merge conflicts
+- Unreadable commit history
+
+---
 # What?
 Branching strategy 
 
